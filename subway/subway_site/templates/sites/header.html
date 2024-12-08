@@ -1,0 +1,32 @@
+{% load static %}
+<header>
+    <div class="logo">
+        <a href="http://127.0.0.1:8000">
+            <img src="{% static 'logos/logo.png' %}" alt="Subway logo">
+        </a>
+    </div>
+    <div class="icons">
+        <a href="https://www.ubereats.com/pl/brand/subway" class="icon uber-eats">
+            <img src="{% static 'logos/uber_eats.PNG' %}" alt="Uber Eats">
+        </a>
+        <a href="https://www.pyszne.pl/subway" class="icon pyszne">  <!-- Poprawiłem link do pyszne.pl -->
+            <img src="{% static 'logos/pyszne.PNG' %}" alt="Pyszne">
+        </a>
+        <a href="https://glovoapp.com/pl/pl/" class="icon glovo">
+            <img src="{% static 'logos/glovo.PNG' %}" alt="Glovo">
+        </a>
+        <a href="https://wolt.com/pl/discovery" class="icon Wolt">
+            <img src="{% static 'logos/wolt.PNG' %}" alt="Wolt">
+        </a>
+        <a href="https://food.bolt.eu/pl-PL/landing" class="icon bolt">
+            <img src="{% static 'logos/bolt.PNG' %}" alt="Bolt">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Catering</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>

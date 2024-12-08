@@ -1,49 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="D:\JetBrains\onetoone-subway\subway\static\css\style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-      <header >
-        <div class="logo">
-            <a href="main.html">
-              <img src="D:\JetBrains\onetoone-subway\subway\static\images\logo.png" alt="Subway logo">
-            </a>
-        </div>
-        <div class="icons">
-            <a href="https://www.ubereats.com/pl/brand/subway" class="icon uber-eats">
-                <img src="D:\JetBrains\onetoone-subway\subway\static\images\uber_eats.png" alt="Uber Eats">
-            </a>
-            <a href="#https://www.pyszne.pl/subway" class="icon pyszne">
-                <img src="D:\JetBrains\onetoone-subway\subway\static\images\pyszne.png" alt="Pyszne">
-            </a>
-            <a href="https://glovoapp.com/pl/pl/" class="icon glovo">
-                <img src="D:\JetBrains\onetoone-subway\subway\static\images\glovo.png" alt="Glovo">
-            </a>
-            <a href="https://wolt.com/pl/discovery" class="icon Wolt">
-                <img src="D:\JetBrains\onetoone-subway\subway\static\images\wolt.png" alt="Wolt">
-            </a>
-          <a href="https://food.bolt.eu/pl-PL/landing" class="icon bolt">
-                <img src="D:\JetBrains\onetoone-subway\subway\static\images\bolt.png" alt="Bolt">
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Catering</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subway by Borygo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
 
-        <h1>Welcome to My Website</h1>
-    </main>
-    <script src="index.js"></script>
-  </body>
+  {% include 'sites/header.html' %}
+  {% include 'sites/carousel.html' %}
+
+</body>
 </html>
