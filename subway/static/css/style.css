@@ -71,3 +71,62 @@ nav ul li a {
 nav ul li a:hover {
     color: #005500;
 }
+.container {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 3fr 1fr 1fr; /* Trzy kolumny o różnych proporcjach */
+    grid-template-rows: auto auto auto; /* Dynamiczne wysokości */
+    gap: 20px; /* Odstępy między elementami */
+    max-width: 1450px;
+    border: 15px solid white;
+    margin: auto;
+    margin-top: -130px; /* Nachodzi na element nad */
+    margin-bottom: -20px; /* Nachodzi na element poniżej */
+    transform: scale(0.80);
+}
+
+.box {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+   }
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s ease;
+}
+.box:hover img {
+  transform: scale(1.2); /* Powiększ obraz o 10% */
+}
+/* Specjalne klasy dla układu */
+.box1 {
+    grid-column: 1 / 2; /* Pierwsza kolumna */
+    grid-row: 1 / 3; /* Rozciąga się na dwa wiersze */
+}
+
+.box2 {
+    width: 340px;
+    hegiht: 280px;
+    grid-column: 2 / 3; /* Druga kolumna */
+    grid-row: 1; /* Pierwszy wiersz */
+}
+
+.box3 {
+    width: 340px;
+    hegiht: 280px;
+    grid-column: 3 / 4; /* Trzecia kolumna */
+    grid-row: 1; /* Pierwszy wiersz */
+}
+
+.box4 {
+    grid-column: 2 / 4; /* Obejmuje dwie kolumny (2 i 3) */
+    grid-row: 2; /* Drugi wiersz */
+}
+
+.box5 {
+    grid-column: 1 / 4; /* Rozciąga się na trzy kolumny */
+    grid-row: 3; /* Trzeci wiersz */
