@@ -18,13 +18,18 @@ header {
     align-items: center;
     padding: 10px 40px;
     background-color: #ffffff;
-    border-bottom: 2px solid #dcdcdc;
+    border-bottom: 5px solid green;
+    position: fixed; /* Dodano, aby nagłówek był przyklejony */
+    top: 0; /* Ustawienie na górze strony */
+    width: 100%; /* Nagłówek zajmuje całą szerokość */
+    z-index: 1000; /* Zapewnia, że nagłówek jest nad innymi elementami */
 }
 
 /* Logo */
 .logo img {
     margin-left: 250px;
-    height: 50px;
+    width: 450px;
+    height: 80px;
 }
 
 /* Ikony */
@@ -37,8 +42,8 @@ header {
 
 /* Pojedyncza ikona */
 .icon img {
-    height: 45px;
-    width: 45px;
+    height: 60px;
+    width: 60px;
 }
 
 /* Nawigacja */
@@ -71,6 +76,12 @@ nav ul li a {
 nav ul li a:hover {
     color: #005500;
 }
+
+/* KARUZELA REKLAM*/
+.carousel-inner{
+    margin-top: 100px;
+}
+
 /* Reklamy */
 .container {
     display: grid;
@@ -314,6 +325,7 @@ nav ul li a:hover {
 .sharing-content {
     text-align: center;
     padding: 50px 0;
+    margin-bottom: -50px;
 }
 
 /* Stylowanie dla obrazka i tekstu ALT */
@@ -393,4 +405,95 @@ nav ul li a:hover {
 #insta:hover img {
     transform: scale(1.1);
     background-color: purple;
+}
+
+/* FOOOTER */
+
+footer {
+    padding: 20px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.left-section, .middle-section, .right-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.middle-section h2 {
+    margin-bottom: 10px;
+}
+
+.menu-buttons1 button {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #444444; /* Podstawowy kolor tła */
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-buttons1 button:hover {
+    background-color: #00ff00; /* Zielony kolor tła przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie */
+}
+
+.right-section img {
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer-bottom .left {
+    text-align: left;
+}
+
+.footer-bottom .right {
+    text-align: right;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a {
+    color: #ffffff; /* Linki będą białe */
+    text-decoration: none; /* Usuwa podkreślenie */
+    transition: transform 0.2s ease, color 0.2s ease; /* Animacja skalowania */
+}
+
+a:hover {
+    transform: scale(1.1); /* Skalowanie o 1.1 przy najechaniu */
+    color: #dddddd; /* Opcjonalnie możesz zmienić na jaśniejszy kolor przy najechaniu */
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
