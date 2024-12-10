@@ -1,4 +1,4 @@
-/* Podstawowe resetowanie marginesów i paddingów */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px; /* Zwiększono padding po bokach */
+    padding: 10px 40px;
     background-color: #ffffff;
     border-bottom: 2px solid #dcdcdc;
 }
@@ -30,7 +30,7 @@ header {
 /* Ikony */
 .icons {
     display: flex;
-    gap: 7px; /* Dostosowano odstępy między ikonami */
+    gap: 7px;
     margin-left: auto;
     lign-items: center;
 }
@@ -71,17 +71,18 @@ nav ul li a {
 nav ul li a:hover {
     color: #005500;
 }
+/* Reklamy */
 .container {
     display: grid;
     background-color: white;
-    grid-template-columns: 3fr 1fr 1fr; /* Trzy kolumny o różnych proporcjach */
-    grid-template-rows: auto auto auto; /* Dynamiczne wysokości */
-    gap: 20px; /* Odstępy między elementami */
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
     max-width: 1450px;
     border: 15px solid white;
     margin: auto;
-    margin-top: -130px; /* Nachodzi na element nad */
-    margin-bottom: -20px; /* Nachodzi na element poniżej */
+    margin-top: -130px;
+    margin-bottom: -20px;
     transform: scale(0.80);
 }
 
@@ -100,33 +101,142 @@ nav ul li a:hover {
     transition: transform 0.8s ease;
 }
 .box:hover img {
-  transform: scale(1.2); /* Powiększ obraz o 10% */
+  transform: scale(1.2);
 }
-/* Specjalne klasy dla układu */
+
 .box1 {
-    grid-column: 1 / 2; /* Pierwsza kolumna */
-    grid-row: 1 / 3; /* Rozciąga się na dwa wiersze */
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 
 .box2 {
     width: 340px;
     hegiht: 280px;
-    grid-column: 2 / 3; /* Druga kolumna */
-    grid-row: 1; /* Pierwszy wiersz */
+    grid-column: 2 / 3;
+    grid-row: 1;
 }
 
 .box3 {
     width: 340px;
     hegiht: 280px;
-    grid-column: 3 / 4; /* Trzecia kolumna */
-    grid-row: 1; /* Pierwszy wiersz */
+    grid-column: 3 / 4;
+    grid-row: 1;
 }
 
 .box4 {
-    grid-column: 2 / 4; /* Obejmuje dwie kolumny (2 i 3) */
-    grid-row: 2; /* Drugi wiersz */
+    grid-column: 2 / 4;
+    grid-row: 2;
 }
 
 .box5 {
-    grid-column: 1 / 4; /* Rozciąga się na trzy kolumny */
-    grid-row: 3; /* Trzeci wiersz */
+    grid-column: 1 / 4;
+    grid-row: 3;
+}
+
+
+/* PRODUKTY  */
+
+.menu-products {
+  text-align: center;
+  margin: 20px auto;
+  background-color: #333;
+  padding-left: 20px;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  margin-top: -130px;
+}
+
+.products-wrapper {
+  width: 1125px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.products {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.product {
+  flex: 0 0 355px;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product img {
+  width: 360px;
+  height: 270px;
+  transition: filter 0.3s ease;
+}
+
+.product:hover img {
+  filter: brightness(0.7);
+}
+
+.product::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 128, 0, 0.7), rgba(0, 128, 0, 0) 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Tekst ALT */
+.alt-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.product:hover::before {
+  opacity: 1;
+}
+
+.product:hover .alt-text {
+  opacity: 1;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: relative;
+  top: 50px;
+  right: 385px;
+  z-index: 10;
+}
+
+.arrow {
+  background-color: #ccc;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.show-all {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-top: 50px;
+}
