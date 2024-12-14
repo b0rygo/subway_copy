@@ -133,7 +133,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 220px; /* Dodano odstęp od nagłówka */
+    margin-top: 150px; /* Dodano odstęp od nagłówka */
     position: relative; /* Zapewnia brak konfliktu z innymi elementami */
     z-index: 1; /* Gwarantuje, że będzie widoczne pod headerem */
 }
@@ -260,4 +260,5 @@ a:hover {
 
 .footer-bottom a:hover {
     text-decoration: underline;
+    color: blue;
 }
