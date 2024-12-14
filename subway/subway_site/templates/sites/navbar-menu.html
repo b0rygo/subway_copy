@@ -1,11 +1,11 @@
 <div class="menu-categories">
-        <button class="category active">Wszystkie</button>
-        <button class="category">Przekąski i napoje</button>
-        <button class="category">Sałatki</button>
-        <button class="category">Signatury wrapy</button>
-        <button class="category">Śniadanie</button>
-        <button class="category">Suby</button>
-        <button class="category">Veggie</button>
+        <a href="?category=Wszystkie" class="category {% if selected_category == 'Wszystkie' %}active{% endif %}" id="wszystkie">Wszystkie</a>
+        <a href="?category=Przekąski i napoje" class="category {% if selected_category == 'Przekąski i napoje' %}active{% endif %}" >Przekąski i napoje</a>
+        <a href="?category=Sałatki" class="category {% if selected_category == 'Sałatki' %}active{% endif %}" >Sałatki</a>
+        <a href="?category=Wrapy" class="category {% if selected_category == 'Wrapy' %}active{% endif %}" >Wrapy</a>
+        <a href="?category=Śniadanie" class="category {% if selected_category == 'Śniadanie' %}active{% endif %}" >Śniadanie</a>
+        <a href="?category=Suby" class="category {% if selected_category == 'Suby' %}active{% endif %}" >Suby</a>
+        <a href="?category=Veggie" class="category {% if selected_category == 'Veggie' %}active{% endif %}" >Veggie</a>
         <span class="divider">|</span>
         <button class="categories secondary" id="allergensButton">Tabela alergenów</button>
         <button class="categories secondary" id="nutritionButton">Informacja o wartościach odżywczych</button>
