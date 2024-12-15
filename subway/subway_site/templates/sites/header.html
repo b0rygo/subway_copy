@@ -9,7 +9,7 @@
         <a href="https://www.ubereats.com/pl/brand/subway" class="icon uber-eats">
             <img src="{% static 'logos/uber_eats.PNG' %}" alt="Uber Eats">
         </a>
-        <a href="https://www.pyszne.pl/subway" class="icon pyszne">  <!-- Poprawiłem link do pyszne.pl -->
+        <a href="https://www.pyszne.pl/subway" class="icon pyszne">
             <img src="{% static 'logos/pyszne.PNG' %}" alt="Pyszne">
         </a>
         <a href="https://glovoapp.com/pl/pl/" class="icon glovo">
@@ -25,7 +25,7 @@
     <nav>
         <ul>
             <li><a href="{% url 'menu' %}">Menu</a></li>
-            <li><a href="#">Catering</a></li>
+            <li><a href="{% url 'catering' %}">Catering</a></li>
             <li><a href="https://restaurants.subway.com/pl/polska">Kontakt</a></li>
         </ul>
     </nav>

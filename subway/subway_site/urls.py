@@ -8,6 +8,7 @@ urlpatterns = [
 	path("admin/", admin.site.urls),
 	path("", views.home, name="home"),
 	path("menu/", views.menu_view, name='menu'),
+	path("catering/", views.catering_view, name='catering'),
 	path('menu-item/<str:item_name>/', views.menu_item_detail, name='menu_item_detail'),
 ]
 

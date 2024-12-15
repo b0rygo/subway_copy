@@ -5,6 +5,8 @@ from .models import Item
 def home(request):
     return render(request, 'sites/main.html')
 
+def catering_view(request):
+    return render(request, 'sites/catering.html')
 
 def menu_view(request):
     selected_category = request.GET.get('category', 'Wszystkie')

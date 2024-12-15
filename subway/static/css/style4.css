@@ -1,0 +1,402 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+
+/* HEADER */
+
+/* Nagłówek */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    border-bottom: 5px solid green;
+    position: fixed; /* Dodano, aby nagłówek był przyklejony */
+    top: 0; /* Ustawienie na górze strony */
+    width: 100%; /* Nagłówek zajmuje całą szerokość */
+    z-index: 1000; /* Zapewnia, że nagłówek jest nad innymi elementami */
+}
+
+/* Logo */
+.logo img {
+    margin-left: 250px;
+    width: 450px;
+    height: 80px;
+}
+
+/* Ikony */
+.icons {
+    display: flex;
+    gap: 7px;
+    margin-left: auto;
+    lign-items: center;
+}
+
+/* Pojedyncza ikona */
+.icon img {
+    height: 60px;
+    width: 60px;
+}
+
+/* Nawigacja */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 400px;
+    margin-left: -10px;
+    margin-top: 20px;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #008000;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    color: #005500;
+}
+
+/* LOGO CATERING */
+.cateringlogo{
+    margin-top: 105px;
+    height: 668px;
+}
+
+.cateringmenu {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+/* Nagłówki */
+h1 {
+    background-color: #11782b;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 26px;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    font-size: 22px;
+    color: #11782b;
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+/* Przycisk */
+button {
+    display: block;
+    background-color: #11782b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0d5e22;
+}
+
+.subbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subboximg {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.subboxtext {
+    flex: 1;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #11782b;
+    margin: 0 0 10px 0;
+}
+
+.subtext {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.subpodtext {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.6;
+}
+
+.otherboxes {
+    display: flex; /* Ustawienie kontenera na flexbox */
+    justify-content: space-between; /* Rozstawienie divów równomiernie */
+    gap: 2rem; /* Odstęp między divami */
+    max-width: 1200px; /* Maksymalna szerokość kontenera */
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+}
+
+.otherbox {
+    flex: 1; /* Każdy div zajmuje równą część kontenera */
+    display: flex;
+    flex-direction: column; /* Układ pionowy wewnątrz diva */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    gap: 1rem; /* Odstępy między elementami w divie */
+}
+
+.otherbox img {
+    width: 100%; /* Zdjęcie wypełnia szerokość diva */
+    height: auto; /* Zachowanie proporcji zdjęcia */
+    border-radius: 8px; /* Zaokrąglenie rogów zdjęcia */
+}
+
+/* CONTACT BAR AND PHOTO WITH LOVE TO SHARING */
+
+.sharing-content {
+    text-align: center;
+    padding: 50px 0;
+    margin-top: -25px;
+    margin-bottom: -50px;
+}
+
+/* Stylowanie dla obrazka i tekstu ALT */
+.sharing.img {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.sharing.img img {
+    width: 100%;
+    height: 414px;
+}
+
+.alt-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.sharing-content1 {
+    background-color: rgb(139, 205, 50); /* Kolor limonkowy */
+    padding: 30px 20px;
+    display: flex; /* Używamy flexboxa */
+    justify-content: center; /* Wyrównanie elementów w poziomie */
+    align-items: center; /* Wyrównanie elementów w pionie */
+    gap: 20px; /* Odstęp między elementami */
+}
+
+.sharing-content1 p {
+    color: #006837; /* Ciemniejszy zielony kolor tekstu */
+    font-size: 18px;
+    margin: 0; /* Usuwamy domyślne marginesy */
+}
+
+.sharing-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #006837;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.sharing-button:hover {
+    background-color: #004d2a;
+}
+
+.sharing-content2 {
+    background-color: rgb(139, 205, 50);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon1 img {
+    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#fb:hover img {
+    transform: scale(1.1);
+    background-color: #0066cc;
+}
+#yt:hover img {
+    transform: scale(1.1);
+    background-color: red;
+}
+#insta:hover img {
+    transform: scale(1.1);
+    background-color: purple;
+}
+
+/* FOOOTER */
+
+footer {
+    padding: 20px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.left-section, .middle-section, .right-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.middle-section h2 {
+    margin-bottom: 10px;
+}
+
+.menu-buttons1 button {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #444444; /* Podstawowy kolor tła */
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-buttons1 button:hover {
+    background-color: #00ff00; /* Zielony kolor tła przy najechaniu */
+    transform: scale(1.05); /* Delikatne powiększenie */
+}
+
+.right-section img {
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer-bottom .left {
+    text-align: left;
+}
+
+.footer-bottom .right {
+    text-align: right;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a {
+    color: #ffffff; /* Linki będą białe */
+    text-decoration: none; /* Usuwa podkreślenie */
+    transition: transform 0.2s ease, color 0.2s ease; /* Animacja skalowania */
+}
+
+a:hover {
+    transform: scale(1.1); /* Skalowanie o 1.1 przy najechaniu */
+    color: #dddddd; /* Opcjonalnie możesz zmienić na jaśniejszy kolor przy najechaniu */
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Stylowanie dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .subbox {
+        flex-direction: column;
+    }
+
+    .subbox img {
+        max-width: 100%;
+    }
+
+    .otherbox-container {
+        flex-direction: column;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+}
+
