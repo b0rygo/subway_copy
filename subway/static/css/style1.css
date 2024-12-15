@@ -47,10 +47,10 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 300px;
-    margin-left: 20px;
+    margin-right: 400px;
+    margin-left: -10px;
     margin-top: 20px;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -136,9 +136,9 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 150px; /* Dodano odstęp od nagłówka */
-    position: relative; /* Zapewnia brak konfliktu z innymi elementami */
-    z-index: 1; /* Gwarantuje, że będzie widoczne pod headerem */
+    margin-top: 150px;
+    position: relative;
+    z-index: 1;
 }
 
 .category {
@@ -218,7 +218,7 @@ footer {
     display: inline-block;
     margin-bottom: 10px;
     padding: 10px 20px;
-    background-color: #444444; /* Podstawowy kolor tła */
+    background-color: #444444;
     border: none;
     color: #ffffff;
     cursor: pointer;
@@ -228,8 +228,8 @@ footer {
 }
 
 .menu-buttons1 button:hover {
-    background-color: #00ff00; /* Zielony kolor tła przy najechaniu */
-    transform: scale(1.05); /* Delikatne powiększenie */
+    background-color: #00ff00;
+    transform: scale(1.05);
 }
 
 .right-section img {
@@ -263,14 +263,14 @@ footer {
 }
 
 a {
-    color: #ffffff; /* Linki będą białe */
-    text-decoration: none; /* Usuwa podkreślenie */
-    transition: transform 0.2s ease, color 0.2s ease; /* Animacja skalowania */
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 a:hover {
-    transform: scale(1.1); /* Skalowanie o 1.1 przy najechaniu */
-    color: #dddddd; /* Opcjonalnie możesz zmienić na jaśniejszy kolor przy najechaniu */
+    transform: scale(1.1);
+    color: #dddddd;
 }
 
 .footer-bottom a:hover {

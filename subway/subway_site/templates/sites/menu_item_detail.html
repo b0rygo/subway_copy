@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ item.name }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+</head>
+<body>
+{% include 'sites/header.html' %}
+
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="menu-icons">
+                <img src="{% static 'logos/menu-icon.JPG' %}" id="menu" alt="Menu">
+            </div>
+        </div>
+        <div class="navbar-right">{{ item.name }}</div>
+    </div>
+
+    <div class="menu-item-detail">
+        <div class="menu-img">
+            <img src="{{ item.img.url }}" alt="{{ item.name }}">
+        </div>
+        <div class="menu-text">
+            <div class="item-buttons">
+            <button class="categories secondary" id="allergensButton">Tabela alergenów</button>
+            <button class="categories secondary" id="nutritionButton">Informacja o wartościach odżywczych</button>
+            </div>
+
+            <h1>{{ item.name }}</h1>
+            <p>Cena: <b>{{ item.price }} zł</b></p>
+            <p>{{ item.text }}</p>
+        </div>
+    </div>
+    <div class="menu-three-items">
+        <p><b>Więcej produktów z oferty</b></p>
+        <div class="related-products">
+    {% for related_item in related_items %}
+    <div class="menu-item" id="item-{{ related_item.id }}" data-url="{% url 'menu_item_detail' related_item.name %}">
+        <div class="menu-item-content">
+            <img src="{{ related_item.img.url }}" alt="{{ related_item.name }}">
+            <div class="alt-text">{{ related_item.name }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% include 'sites/downbar.html' %}
+<script src="{% static 'js/menu-item-js.js' %}"></script>
+</body>
+</html>

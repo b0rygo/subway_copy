@@ -12,8 +12,6 @@ const categoryLinks = document.querySelectorAll('.category');
 const menuProducts = document.querySelector('.menu-products');
 
 wszystkieLink.addEventListener('click', function() {
-    menuProducts.style.marginTop = "-180px";
-
     categoryLinks.forEach(link => link.classList.remove('active'));
 });
 
@@ -27,6 +25,9 @@ if (category === 'Wszystkie') {
 } else if (category === 'Suby') {
     menuProducts.style.setProperty('margin-top', '-75px', 'important');
     menuProducts.style.setProperty('margin-bottom', '-50px', 'important');
+} else if (category === null || category === undefined)
+{
+    menuProducts.style.setProperty('margin-top', '-180px', 'important');
 }
 else {
     menuProducts.style.setProperty('margin-top', '0px', 'important');
