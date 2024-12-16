@@ -334,3 +334,118 @@ a:hover {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+
+/* Stylowanie dla mniejszych ekranów */
+@media (max-width: 1024px) {
+    .logo {
+        margin: 0 auto; /* Ustaw logo na środku */
+        text-align: center; /* Wyrównaj zawartość wewnątrz do środka */
+    }
+
+    .logo img {
+        margin: 0; /* Usuń marginesy */
+        width: 300px; /* Zmień rozmiar logo dla mniejszych ekranów (opcjonalne) */
+        height: auto; /* Zachowaj proporcje logo */
+    }
+    .subbox {
+        flex-direction: column;
+    }
+
+    .subbox img {
+        max-width: 100%;
+    }
+
+    .otherbox-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100px; /* Dostosuj do wysokości headera */
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0;
+        border-top: 2px solid green;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: green;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 30px;
+        height: 4px;
+        background-color: green;
+        border-radius: 2px;
+    }
+
+    .icons {
+        display: none; /* Ukryj ikony, jeśli chcesz */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+    .container{
+        transform: scale(0.7);
+    }
+    .box1
+    {
+    width:414px;
+    height:414px;
+    }
+    .box2 {
+    width: 195px;
+    hegiht: 195px;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    }
+
+    .box3 {
+    width: 195px;
+    hegiht: 195px;
+    grid-column: 3 / 4;
+    grid-row: 1;
+    }
+
+    .slider-controls
+    {
+        align-items: center;
+        margin-left: 650px;
+    }
+
+    .products
+    {
+        transform: scale(0.7);
+        margin-right: 550px;
+    }
+    .find-subway-section
+    {
+        transform: scale(0.7);
+        margin-top: -140px;
+        margin-bottom: -140px;
+    }
+}
